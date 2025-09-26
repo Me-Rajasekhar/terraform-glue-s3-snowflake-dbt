@@ -1,0 +1,13 @@
+upcrewpro:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: <your_account>
+      user: <your_user>
+      password: <your_password_or_use_key_pair>
+      role: SYSADMIN
+      database: UPCREWPRO
+      warehouse: COMPUTE_WH
+      schema: PUBLIC
+      threads: 4

@@ -1,0 +1,26 @@
+name: dbt CI
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  dbt-run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+      - name: Install dbt
+        run: |
+          pip install dbt-core dbt-snowflake
+      - name: Run dbt
+        env:
+          DBT_PROFILES_DIR: ./dbt
+        run: |
+          cd dbt
+          dbt deps
+          dbt seed --profiles-dir .
+          dbt run --profiles-dir .
+          dbt test --profiles-dir .
