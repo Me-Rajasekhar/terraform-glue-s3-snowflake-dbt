@@ -329,15 +329,6 @@ Example CloudWatch alarm (Terraform or Console) for Glue failed jobs included in
 
 ---
 
-## Interview talking points (ready-made bullet points)
-
-* Designed and implemented secure, scalable CDC pipeline from Oracle to Snowflake using AWS Glue, S3, Snowpipe and dbt.
-* Implemented automated ingestion with Snowpipe and S3 event notifications via Lambda; reduced data latency from batch to near-real-time.
-* Used parquet format and partitioning to optimize storage and Snowflake ingestion costs.
-* Ensured observability via CloudWatch, Snowflake ingestion metrics, dbt tests and CI/CD; configured alerts to Slack/PagerDuty.
-* Implemented Terraform for repeatable provisioning and GitHub Actions for CI:dbt and infra deployment.
-
----
 
 ## Next steps / optional enhancements
 
